@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="30dp"
+        android:background="@color/gradientBlue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Parking Slot"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="24sp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bookStatusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tvBookID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Booking ID"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/statusBookID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tvBookID"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="743-A"
+            android:textColor="@color/gradientBlue"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsername"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvBookID"
+            android:padding="10dp"
+            app:endIconMode="clear_text">
+
+            <EditText
+                android:id="@+id/edtxtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="phone"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="User Name"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCarType"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tilUsername"
+            android:layout_below="@id/tvBookID"
+            android:padding="10dp"
+            app:endIconMode="clear_text">
+
+            <EditText
+                android:id="@+id/edtxtCarType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="phone"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="Car Type"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNumberPlate"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilUsername"
+            android:padding="10dp"
+            app:endIconMode="clear_text">
+
+            <EditText
+                android:id="@+id/edtxtNumberPlate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="phone"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="Number Plate"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhoneNumber"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilUsername"
+            android:layout_toEndOf="@id/tilNumberPlate"
+            android:padding="10dp"
+            app:endIconMode="clear_text">
+
+            <EditText
+                android:id="@+id/edtxtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="phone"
+                android:fontFamily="@font/ubuntu_regular"
+                android:hint="PhoneNumber"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBookBtn"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilNumberPlate"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/OK"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="ADD"
+            android:textSize="12sp"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelBookBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilNumberPlate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/addBookBtn"
+            android:backgroundTint="@color/Cancel"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="CANCEL"
+            android:textSize="12sp"
+            app:cornerRadius="10dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/BookConfirmedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookStatusLayout"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:elevation="20dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/booked" />
+
+        <TextView
+            android:id="@+id/txtBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottieView"
+            android:layout_marginStart="100dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Booking ID: "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottieView"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/txtBook"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="743-A"
+            android:textColor="@color/gradientBlue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBook"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="An SMS has been sent to your phone Number"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/navigateLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAlert"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Navigate"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:backgroundTint="@color/OK"
+            app:cornerRadius="0dp" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
